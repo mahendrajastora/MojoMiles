@@ -20,9 +20,9 @@ export const footerNavigation: NavItem[] = [
 
 export const productFilters: ProductFilter[] = [
   "All",
-  "Mountain",
+  "Hoodies",
+  "T-Shirts",
   "Minimal",
-  "Quotes",
   "Adventure",
   "Best Seller",
   "New",

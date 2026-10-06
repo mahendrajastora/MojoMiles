@@ -3,6 +3,7 @@ import { Bebas_Neue, Geist, Geist_Mono, Outfit } from "next/font/google";
 import { CartProvider } from "@/contexts/CartContext";
 import { WishlistProvider } from "@/contexts/WishlistContext";
 import { ThemeProvider } from "@/contexts/ThemeContext";
+import { AuthProvider } from "@/contexts/AuthContext";
 import LayoutShell from "@/components/layout/LayoutShell";
 import Footer from "@/components/layout/Footer";
 import "./globals.css";
@@ -32,7 +33,7 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Mojo Miles | Wear Your Escape.",
   description:
-    "Mojo Miles is a premium oversized streetwear brand with AI-powered customization and elevated essentials.",
+    "Mojo Miles is a premium oversized streetwear brand focused on elevated hoodies and T-shirts.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -40,12 +41,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable} ${outfit.variable} h-full antialiased`}>
       <body className="min-h-full bg-[var(--background)] text-[var(--foreground)]">
         <ThemeProvider>
-          <CartProvider>
-            <WishlistProvider>
-              <LayoutShell>{children}</LayoutShell>
-              <Footer />
-            </WishlistProvider>
-          </CartProvider>
+          <AuthProvider>
+            <CartProvider>
+              <WishlistProvider>
+                <LayoutShell>{children}</LayoutShell>
+                <Footer />
+              </WishlistProvider>
+            </CartProvider>
+          </AuthProvider>
         </ThemeProvider>
       </body>
     </html>

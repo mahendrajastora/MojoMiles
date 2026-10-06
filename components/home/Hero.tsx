@@ -16,19 +16,19 @@ export default function Hero() {
       >
         <p className="mb-4 text-sm uppercase tracking-[0.35em] text-accent-melon/80">{siteTagline}</p>
         <h1 className="max-w-3xl text-4xl font-semibold leading-tight text-[#F9F8F6] sm:text-5xl lg:text-6xl">
-          Premium oversized T-shirts that feel like freedom.
+          Premium oversized hoodies and T-shirts for everyday escape.
         </h1>
         <p className="mt-6 max-w-2xl text-base leading-8 text-white/70 sm:text-lg">
-          Crafted for motion, comfort, and minimalist confidence. The first collection is designed to layer, lounge,
-          and escape through the city with clean luxury and effortless form.
+          Designed for movement, comfort, and effortless layering — from heavyweight hoodies to premium everyday tees
+          built for city days, road trips, and slow mornings.
         </p>
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
           <Link href="/shop">
-            <Button className="w-full sm:w-auto">Shop T-Shirts</Button>
+            <Button className="w-full sm:w-auto">Shop Hoodies</Button>
           </Link>
-          <Link href="/customize">
+          <Link href="/shop">
             <Button variant="secondary" className="w-full sm:w-auto">
-              Customize Your Tee
+              Shop T-Shirts
             </Button>
           </Link>
         </div>

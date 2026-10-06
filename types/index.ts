@@ -5,6 +5,8 @@ export type ProductTag =
   | "Minimal"
   | "Quotes"
   | "Adventure"
+  | "Hoodies"
+  | "T-Shirts"
   | "Best Seller"
   | "New"
   | "Customizable";
@@ -45,4 +47,12 @@ export interface Review {
 export interface NavItem {
   label: string;
   href: string;
+}
+
+export interface User {
+  id: string;
+  name: string;
+  email: string;
+  phone: string;
+  verified: boolean;
 }
